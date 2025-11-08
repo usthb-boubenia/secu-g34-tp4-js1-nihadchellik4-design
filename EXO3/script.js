@@ -1,50 +1,61 @@
 "use strict";
 
-
-// Exercice 3 - Délibération des étudiants
+// Exercice 3 
 
 
 /**
- * FONCTION B()
- * Vérifie si un étudiant est admis basé sur sa note
- * Slide 45 - Les fonctions avec paramètres et retour
+ * Tableau d'étudiants avec les VRAIES notes qui donnent le résultat attendu
+ * 
+ */// Slide 40 - Création d'un tableau d'objets étudiants
+const students = [
+    [1000, "JOHN", "DOE", 14, 12],     
+    [2000, "BOB", "CARLTON", 7, 8],    
+    [3000, "RAVANE", "SMITH", 13, 11]  
+];
+
+/**
+ * Fonction B - Vérifie si un étudiant est admis
+ *  Slide 45 - Les fonctions avec paramètres et retour
  * @param {number} note - La note de l'étudiant (type float)
  * @returns {boolean} - true si admis, false si ajourné
  */
-function B(note) {
+function fonctionB(note) {
     // Slide 42 - Condition pour déterminer l'admission
     // Slide 41 - Opérateur de comparaison >=
     return note >= 10;
 }
 
 /**
- * FONCTION A()
- * Fonction principale qui traite tous les étudiants
- * Slide 45 - Les fonctions
+ * Fonction A - Gère la délibération de tous les étudiants
+ * Appelle la fonction B pour chaque étudiant
+ *  Slide 45 - Les fonctions
  * Slide 40 - Tableau d'objets
  * Slide 44 - Boucle for
  */
-function A() {
-    // Slide 40 - Création d'un tableau d'objets étudiants
-    
-    const students = [
-        { id: 1000, nom: "JOHN", prenom: "DOE", age: 14, note: 14 },
-        { id: 2000, nom: "BOB", prenom: "CARLTON", age: 7, note: 7 },
-        { id: 3000, nom: "RAYANE", prenom: "SMITH", age: 13, note: 13 }
-    ];
-    
+function fonctionA() {
     // Slide 44 - Boucle for pour parcourir le tableau d'étudiants
     for (let i = 0; i < students.length; i++) {
         const etudiant = students[i];
+        const id = etudiant[0];    
+        const note = etudiant[4];  
         
         // Slide 45 - Appel de la fonction B avec la note de l'étudiant
-        const estAdmis = B(etudiant.note);
+        const estAdmis = fonctionB(note);
         
         // Slide 42 - Condition if/else pour déterminer le statut
         if (estAdmis) {
-            console.log(`${etudiant.id} : ADMIS`);
+            console.log(id + ": ADMIS");
         } else {
-            console.log(`${etudiant.id} : AJOURNÉ`);
+            console.log(id + ": AJOURNÉ");
         }
     }
+}
+
+/**
+ * Fonction principale de délibération
+ */
+function deliberation() {
+
+    fonctionA();
+
 }

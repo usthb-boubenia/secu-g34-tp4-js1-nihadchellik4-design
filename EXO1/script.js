@@ -1,49 +1,57 @@
 "use strict";
 
-// Exercice 1 - TP4 JavaScript
-// Slide 37: Déclaration des variables avec différents types primitifs
+// Exercice 1 
 
-// Déclaration des variables (Slide 37 - Types primitifs)
-const nom = "Doe";
-const prenom = "John";
-const nomComplet = "John-Doe";
-const age = 30;
-const note = 15;
-const pi = 3.14;
 
-// Slide 45: Définition des fonctions
-
-// Fonction pour afficher le nom dans la console
-function F1() {
-    // Slide 33: Utilisation de console.log() pour l'affichage
-    console.log(nom);
+/**
+ * Fonction F1 - Affiche le nom "John"
+ * Utilisation de console.log() - vu dans le cours slide 15
+ */
+function f1() {
+    console.log("John");
 }
 
-// Fonction pour afficher le prénom dans la console
-function F2() {
-    console.log(prenom);
+/**
+ * Fonction F2 - Affiche le prénom "Doe"
+ * Utilisation de console.log() - vu dans le cours slide 15
+ */
+function f2() {
+    console.log("Doe");
 }
 
-// Fonction pour afficher le nom complet dans la console
-function F3() {
-    console.log(nomComplet);
+/**
+ * Fonction F3 - Affiche le nom et prénom concaténés
+ * Utilisation de la concaténation de strings - vu dans le cours slide 25
+ */
+function f3() {
+    const nom = "John";
+    const prenom = "Doe";
+    console.log(nom + "-" + prenom); // Concaténation avec l'opérateur +
 }
 
-// Fonction pour afficher l'âge dans la console
-function F4() {
+/**
+ * Fonction F4 - Affiche l'âge
+ * Utilisation des nombres - vu dans le cours slide 20
+ */
+function f4() {
+    const age = 30;
     console.log(age);
 }
 
-// Fonction pour afficher la note dans la console
-function F5() {
+/**
+ * Fonction F5 - Affiche la note
+ * Utilisation des nombres - vu dans le cours slide 20
+ */
+function f5() {
+    const note = 15;
     console.log(note);
 }
 
-// Fonction pour afficher la valeur de pi dans la console
-function F6() {
+/**
+ * Fonction F6 - Affiche la valeur de Pi
+ * Utilisation des nombres à virgule flottante - vu dans le cours slide 20
+ */
+function f6() {
+    const pi = 3.14;
     console.log(pi);
 }
-
-// Message initial dans la console
-console.log("=== EXERCICE 1 - TP4 JAVASCRIPT ===");
-console.log("Cliquez sur les en-têtes du tableau pour afficher les valeurs dans la console");
