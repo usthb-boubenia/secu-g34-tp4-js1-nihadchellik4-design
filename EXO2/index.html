@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 2 - JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        
+        .boutons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            background-color: white;
+            color: black;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercice 2:</h1>
+    
+    <div class="boutons-container">
+        
+        <button onclick="f1()">Tableau Etudiants</button>
+        <button onclick="f2()">Objet Etudiant</button>
+        <button onclick="f3()">Tableau d'objets Etudiants</button>
+    </div>
+
+    <!-- Inclusion du fichier script.js -->
+    <script src="script.js"></script>
+</body>
+</html>
